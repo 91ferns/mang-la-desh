@@ -6,5 +6,14 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.mangladesh.com" # the base hostname & protocol for your site
 
+footer1: Mang-la-Desh! Swim and Lounge Apparel
+company: MANGLADESH L.L.C. 
+
+address: "515 West Avenue, Suite 553, Norwalk, C.T. 06850"
+phone: 203-299-0697
+
+facebook: https://www.facebook.com/pages/Mang-la-desh/119404498409?ref=aymt_homepage_panel
+linkedin: https://www.linkedin.com/in/mangladesh
+
 # Build settings
 markdown: kramdown

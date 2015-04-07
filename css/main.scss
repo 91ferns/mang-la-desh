@@ -15,6 +15,7 @@ $spacing-unit:     65px;
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #eb1c74;
+$brand-inverse:	   #62ccca;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -41,7 +42,107 @@ $on-laptop:        1100px;
     }
 }
 
+.mc-field-group {
+	
+	box-sizing: border-box;
 
+	&.size2of4,
+	&.size1of4 {
+		float: left;
+	}
+
+	&.size2of4 {
+		width: 50%;
+	}
+
+	&.sizefirst {
+
+	}
+
+	&.size1of4 {
+		width: 25%;
+	}
+
+	> input,
+	> select,
+	.phonefield {
+		height: 28px;
+		line-height: 28px;
+		width: 100%;
+
+		background-color: white;
+
+		padding: 7px 13px;
+
+		box-sizing: border-box;
+
+		margin-bottom: 10px;
+	}
+
+	.phonefield {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		input {
+			border: 0px;
+		}
+	}
+
+	> select {
+		padding: 0px;
+		border: 0px;
+		border-radius: 0px;
+	}
+}
+
+.form-left,
+.form-right {
+	.mc-field-group {
+		padding: 0 10px;
+	}
+	width: 50%;
+}
+
+.form-left {
+	float: left;
+}
+
+.form-right {
+	float: right;
+}
+
+.clear {
+	@extend %clearfix;
+	
+}
+
+.buttonwrapper {
+	text-align: right;
+	padding-right: 10px;
+}
+
+#mc_embed_signup {
+	@extend %clearfix;
+
+}
+
+.button {
+	height: 35px;
+	line-height: 35px;
+	color: white;
+	border-radius: 4px;
+	padding: 0px;
+	border: 0px;
+	width: 129px;
+
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 1px;
+	text-shadow: 0px 0px black;
+
+	background-color: $brand-inverse;
+
+	@extend %enshadow;
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
