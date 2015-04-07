@@ -1,9 +1,22 @@
 <header class="site-header">
+	
+	<div class="social-nav">
+		<ul class="nav-menu">
+			<li><a href="#">Join our Mailing List</a></li>
+			<li class="social"><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li class="social"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+		</ul>
+	</div>
 
-  <div class="wrapper">
+    <a class="site-title" href="{{ site.baseurl }}/">
+    	<img src="{{ site.baseurl | prepend: 'img/logo.png' }}" alt="{{ site.title }}" height="91" width="883" class="img-responsive centered">
+    	<img src="{{ site.baseurl | prepend: 'img/tagline.png' }}" alt="Swim and Lounge Apparel" height="27" width="658" class="img-responsive centered">
+	</a>
+	
+	<hr class="plaid">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-  </div>
+	<div class="slogan">
+		<img src="{{ site.baseurl | prepend: 'img/fuoco-nelle-vene.png' }}" alt="Fuoco Nelle Vene" class="img-responsive centered" height="49" width="372">
+	</div>
 
 </header>

@@ -21,6 +21,9 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+
+    background-image: url('../img/background.jpg');
+    background-position: center center;
 }
 
 
@@ -154,12 +157,10 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:          $content-width;
+    max-width:          $content-width;
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -170,6 +171,16 @@ pre {
     }
 }
 
+
+
+/**
+ * Clearfix
+ */
+%enshadow {
+
+    box-shadow: 10px 10px 5px #888888;
+    
+}
 
 
 /**
@@ -200,5 +211,20 @@ pre {
         path {
             fill: $grey-color;
         }
+    }
+}
+
+.centered {
+    text-align: center;
+}
+
+.img-responsive {
+    max-width: 100%;
+    display: block;
+    min-width: 1px;
+    min-height: 1px;
+    &.centered {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

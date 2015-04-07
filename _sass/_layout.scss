@@ -2,20 +2,34 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    background-color: $brand-color;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    padding-bottom: 25px;
+    @extend %enshadow;
+}
+
+.pink {
+    background-color: $brand-color;
 }
 
 .site-title {
+    width: 100%;
+
+    padding-top: 50px;
+
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+
+    img {
+        margin: 17px 0;
+    }
 
     &,
     &:visited {
@@ -87,13 +101,57 @@
 }
 
 
+.social-nav {
+    color: white;
+    text-align: right;
+
+    padding: 10px $spacing-unit 0;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        > li {
+            list-style-type: none;
+            display: inline-block;
+
+            a {
+                line-height: 28px;
+                text-transform: uppercase;
+                font-size: 16px;
+                color: white;
+                display: inline-block;
+
+            }
+
+            &.social {
+
+                a {
+                    text-align: center;
+                    background-color: white;
+                    color: $brand-color;
+                    border-radius: 50%;
+                    height: 26px;
+                    width: 26px;
+                }
+
+                a:hover, a:active {
+                    background: none;
+                    color: white;
+                }
+
+            }
+
+        }
+    }
+}
 
 /**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    @extend %enshadow;
+    padding-top: 30px;
 }
 
 .footer-heading {
@@ -162,7 +220,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    background: white;
 }
 
 .page-heading {
@@ -233,4 +291,49 @@
             font-size: 18px;
         }
     }
+}
+
+hr.plaid {
+    height: 57px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0px;
+    border: 0;
+    background-image: url('../img/diamonds.png');
+    background-repeat: repeat-x;
+
+    margin: 20px 0;
+}
+
+.home {
+    @extend %enshadow;
+    padding: 55px $spacing-unit;
+    
+    h3, p, h2 {
+        text-align: center;
+    }    
+    
+    h2 {
+        font-size: 65px;
+        color: #000000;
+    }
+
+    h3 {
+        color: $brand-color;
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 22px;
+        color: #000000;
+        font-weight: 500;
+    }
+}
+
+.footer-wrapper {
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit
+
+    color: white;
 }
