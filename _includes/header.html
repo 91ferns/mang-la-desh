@@ -1,6 +1,6 @@
 <header class="site-header">
 	
-	<div class="social-nav">
+	<div class="social-nav desktop">
 		<ul class="nav-menu">
 			<li><a href="#mc_embed_signup">Join our Mailing List</a></li>
 			<li class="social"><a href="{{site.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -9,14 +9,18 @@
 	</div>
 
     <a class="site-title" href="{{ site.baseurl }}/">
-    	<img src="{{ site.baseurl | prepend: 'img/logo.png' }}" alt="{{ site.title }}" height="91" width="883" class="img-responsive centered">
-    	<img src="{{ site.baseurl | prepend: 'img/tagline.png' }}" alt="Swim and Lounge Apparel" height="27" width="658" class="img-responsive centered">
+    	<div class="space-me">
+	    	<img src="{{ site.baseurl | prepend: 'img/logo.png' }}" alt="{{ site.title }}" height="91" width="883" class="img-responsive centered">
+	    	<img src="{{ site.baseurl | prepend: 'img/tagline.png' }}" alt="Swim and Lounge Apparel" height="27" width="658" class="img-responsive centered">
+    	</div>
 	</a>
 	
 	<hr class="plaid">
 
 	<div class="slogan">
-		<img src="{{ site.baseurl | prepend: 'img/fuoco-nelle-vene.png' }}" alt="Fuoco Nelle Vene" class="img-responsive centered" height="49" width="372">
+		<div class="space-me">
+			<img src="{{ site.baseurl | prepend: 'img/fuoco-nelle-vene.png' }}" alt="Fuoco Nelle Vene" class="img-responsive centered" height="49" width="372">
+		</div>
 	</div>
 
 </header>

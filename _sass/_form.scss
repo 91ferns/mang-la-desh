@@ -33,6 +33,10 @@
 		box-sizing: border-box;
 
 		margin-bottom: 10px;
+
+		input {
+			max-width: 25%;
+		}
 	}
 
 	.phonefield {
@@ -55,15 +59,22 @@
 	.mc-field-group {
 		padding: 0 10px;
 	}
-	width: 50%;
+	@include media-query($on-laptop) {
+		width: 50%;
+	}
 }
 
 .form-left {
-	float: left;
+	@include media-query($on-laptop) {
+        float: left;
+    }
+	
 }
 
 .form-right {
-	float: right;
+	@include media-query($on-laptop) {
+		float: right;
+	}
 }
 
 .clear {

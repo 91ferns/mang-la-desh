@@ -15,6 +15,11 @@
     background-color: $brand-color;
 }
 
+.space-me {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .site-title {
     width: 100%;
 
@@ -165,57 +170,6 @@
     margin-left: 0;
 }
 
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-
-
 /**
  * Page content
  */
@@ -308,20 +262,28 @@ hr.plaid {
 }
 
 .home {
-    padding: 55px $spacing-unit;
+    padding: 55px 15px;
+    @include media-query($on-palm) {
+        padding: 55px $spacing-unit;
+    }
     
     h3, p, h2 {
         text-align: center;
     }    
     
     h2 {
-        font-size: 65px;
+        @include media-query($on-palm) {
+            font-size: 65px;
+        }
         color: #000000;
     }
 
     h3 {
         color: $brand-color;
-        font-size: 30px;
+
+        @include media-query($on-palm) {
+            font-size: 30px;
+        }
     }
 
     &.pink h3 {
@@ -353,17 +315,34 @@ hr.plaid {
         top: -5px;
         font-weight: 500;
     }
+
+    h2 {
+        text-align: center;
+        @include media-query($on-palm) {
+            text-align: left;
+        }
+    }
+
+    .social-nav {
+        text-align: center;
+        padding-bottom: 20px;
+    }
 }
 
 .footer-left {
-    width: 50%;
-    float: left;
+    @include media-query($on-palm) {
+        text-align: left;
+        width: 50%;
+        float: left;
+    }
 }
 
 .footer-right {
-    width: 50%;
-    float: right;
-    text-align: right;
+    @include media-query($on-palm) {
+        width: 50%;
+        float: right;
+        text-align: right;
+    }
 
     p {
         margin-top: 35px;

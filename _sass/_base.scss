@@ -165,7 +165,7 @@ pre {
     margin-left: auto;
     @extend %clearfix;
 
-    @include media-query($on-laptop) {
+    @include media-query($on-palm) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
@@ -225,8 +225,23 @@ pre {
     display: block;
     min-width: 1px;
     min-height: 1px;
+    height: auto;
     &.centered {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+.mobile {
+    display: block;
+    @include media-query($on-palm) {
+        display: none;
+    }
+}
+
+.desktop {
+    display: none;
+    @include media-query($on-palm) {
+        display: block;
     }
 }
