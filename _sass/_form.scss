@@ -23,17 +23,35 @@ div.mce_inline_error {
 	  z-index: 1;
 	}
 	&:after {
-		content: url('../img/subscribe.jpg');
+		content: "";
+		background-image: url('../img/subscribe.jpg');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
 		text-indent: 0;
 		padding: 11px;
 		position: fixed;
-		top: 50%;
-		left: 50%;
-		width: 498px;
-		margin-left: -260px;
-		height: 305px;
-		margin-top: -163px;
-		background-color: white;
+
+		height: 50vh;
+		width: 80vw;
+
+		top: 0;
+		left:0;
+
+		margin-left: 10vw;
+		margin-top: 25vh;
+
+		@include media-query($on-laptop) {
+			top: 50%;
+			left: 50%;
+			width: 498px;
+			margin-left: -260px;
+			height: 305px;
+			margin-top: -163px;
+			background-color: white;
+
+		}
+		
 		
 		max-width: 100%;
 
@@ -42,6 +60,10 @@ div.mce_inline_error {
 	}
 	
 
+}
+
+.response {
+	display: block !important;
 }
 
 #mce-error-response {
@@ -112,6 +134,18 @@ div.mce_inline_error {
 	.mc-field-group {
 		padding: 0 10px;
 	}
+
+	@media (max-width: $on-laptop) {
+		.dropitlikeitshot {
+			width: 100%;
+		}
+
+		.mobile-size2of4 {
+			width: 50%;
+		}
+
+	}
+
 	@include media-query($on-laptop) {
 		width: 50%;
 	}
