@@ -245,3 +245,17 @@ pre {
         display: block;
     }
 }
+
+.mobile-inline {
+    display: inline;
+    @include media-query($on-palm) {
+        display: none;
+    }
+}
+
+.desktop-inline {
+    display: none;
+    @include media-query($on-palm) {
+        display: inline;
+    }
+}
