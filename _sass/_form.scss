@@ -29,7 +29,7 @@ div.mce_inline_error {
 		background-position: center;
 		background-repeat: no-repeat;
 		text-indent: 0;
-		padding: 11px;
+//		padding: 11px;
 		position: fixed;
 
 		height: 50vh;
@@ -99,7 +99,7 @@ div.mce_inline_error {
 
 		background-color: white;
 
-		padding: 7px 13px;
+		padding: 0px 13px;
 
 		box-sizing: border-box;
 
@@ -107,6 +107,8 @@ div.mce_inline_error {
 
 		input {
 			max-width: 25%;
+			min-width: 3em;
+			text-align: center;
 		}
 	}
 
